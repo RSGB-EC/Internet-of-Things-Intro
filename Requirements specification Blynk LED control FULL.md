@@ -100,14 +100,14 @@ LED cathode → GND
 | HW-VIN-03 | The voltage input shall be connected to analogue input A0 through a resistor divider. |
 | HW-VIN-04 | The external voltage source negative connection shall be connected to Arduino GND. |
 | HW-VIN-05 | The voltage at A0 shall not exceed 3.3 V under normal operation. |
-| HW-VIN-06 | The recommended resistor divider shall use 18 kΩ as the upper resistor and 33 kΩ as the lower resistor. |
+| HW-VIN-06 | The recommended resistor divider shall use 18 kΩ as the upper resistor and 22 kΩ as the lower resistor. |
 
 Recommended voltage divider:
 
 ```text
 External voltage + ---- 18 kΩ ----+---- A0
                                   |
-                                 33 kΩ
+                                 22 kΩ
                                   |
 External voltage - ---------------+---- Arduino GND
 ```
@@ -115,13 +115,13 @@ External voltage - ---------------+---- Arduino GND
 The divider ratio shall be:
 
 ```text
-A0 voltage = input voltage × 33 kΩ / (18 kΩ + 33 kΩ)
+A0 voltage = input voltage × 22 kΩ / (18 kΩ + 22 kΩ)
 ```
 
 At 5.0 V input, the voltage at A0 shall be approximately:
 
 ```text
-5.0 V × 33 / 51 = 3.24 V
+5.0 V × 22 / 41 = 2.7 V
 ```
 
 This keeps the analogue input below 3.3 V.
